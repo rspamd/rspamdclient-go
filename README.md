@@ -2,8 +2,8 @@
 
 A fully-featured, asynchronous Go client for [Rspamd](https://rspamd.com/) spam filtering system with support for HTTPCrypt encryption.
 
-[![Go Reference](https://pkg.go.dev/badge/github.com/vstakhov/rspamd-client-go.svg)](https://pkg.go.dev/github.com/vstakhov/rspamd-client-go)
-[![Go Report Card](https://goreportcard.com/badge/github.com/vstakhov/rspamd-client-go)](https://goreportcard.com/report/github.com/vstakhov/rspamd-client-go)
+[![Go Reference](https://pkg.go.dev/badge/github.com/rspamd/rspamdclient-go.svg)](https://pkg.go.dev/github.com/rspamd/rspamdclient-go)
+[![Go Report Card](https://goreportcard.com/badge/github.com/rspamd/rspamdclient-go)](https://goreportcard.com/report/github.com/rspamd/rspamdclient-go)
 
 ## Features
 

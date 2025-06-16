@@ -1,4 +1,4 @@
-module github.com/rspamd/rspamd-client-go
+module github.com/rspamd/rspamdclient-go
 
 go 1.21
 
