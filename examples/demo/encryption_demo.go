@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/rspamd/rspamd-client-go/protocol"
+	"github.com/rspamd/rspamdclient-go/protocol"
 	"golang.org/x/crypto/curve25519"
 )
 

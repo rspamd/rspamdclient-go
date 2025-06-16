@@ -15,9 +15,9 @@ import (
 	"time"
 
 	"github.com/klauspost/compress/zstd"
-	"github.com/rspamd/rspamd-client-go/config"
-	"github.com/rspamd/rspamd-client-go/errors"
-	"github.com/rspamd/rspamd-client-go/protocol"
+	"github.com/rspamd/rspamdclient-go/config"
+	"github.com/rspamd/rspamdclient-go/errors"
+	"github.com/rspamd/rspamdclient-go/protocol"
 )
 
 // AsyncClient represents an asynchronous Rspamd client

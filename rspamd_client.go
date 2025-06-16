@@ -18,9 +18,9 @@ package rspamd_client
 import (
 	"context"
 
-	"github.com/rspamd/rspamd-client-go/client"
-	"github.com/rspamd/rspamd-client-go/config"
-	"github.com/rspamd/rspamd-client-go/protocol"
+	"github.com/rspamd/rspamdclient-go/client"
+	"github.com/rspamd/rspamdclient-go/config"
+	"github.com/rspamd/rspamdclient-go/protocol"
 )
 
 // Re-export commonly used types and functions

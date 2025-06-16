@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"log"
 
-	rspamd "github.com/rspamd/rspamd-client-go"
+	rspamd "github.com/rspamd/rspamdclient-go"
 )
 
 func main() {

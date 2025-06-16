@@ -7,8 +7,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/rspamd/rspamd-client-go/config"
-	"github.com/rspamd/rspamd-client-go/protocol"
+	"github.com/rspamd/rspamdclient-go/config"
+	"github.com/rspamd/rspamdclient-go/protocol"
 )
 
 // TestAsyncClientKeyHeader tests that the async client sets the Key header on the outer request
