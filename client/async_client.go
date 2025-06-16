@@ -6,11 +6,13 @@ import (
 	"bytes"
 	"context"
 	"crypto/tls"
+	"crypto/x509"
 	"encoding/json"
 	"fmt"
 	"io"
 	"net/http"
 	"net/url"
+	"os"
 	"strings"
 	"time"
 
@@ -40,7 +42,15 @@ func NewAsyncClient(cfg *config.Config) (*AsyncClient, error) {
 
 		if cfg.TLSSettings.CAPath != nil {
 			// Load CA certificate if specified
-			// This would require loading and parsing the CA file
+			caCert, err := os.ReadFile(*cfg.TLSSettings.CAPath)
+			if err != nil {
+				return nil, errors.NewConfigError(fmt.Sprintf("failed to read CA file: %v", err))
+			}
+			caCertPool := x509.NewCertPool()
+			if !caCertPool.AppendCertsFromPEM(caCert) {
+				return nil, errors.NewConfigError("failed to append CA certificate")
+			}
+			tlsConfig.RootCAs = caCertPool
 		}
 
 		transport := &http.Transport{
