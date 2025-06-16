@@ -152,4 +152,4 @@ func NewUnknownError() *RspamdError {
 		Type:    UnknownError,
 		Message: "",
 	}
-} 
+}

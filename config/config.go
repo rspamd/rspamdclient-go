@@ -42,14 +42,14 @@ type EnvelopeData struct {
 // ToHeaders converts EnvelopeData to HTTP headers map
 func (e *EnvelopeData) ToHeaders() map[string]string {
 	headers := make(map[string]string)
-	
+
 	// Copy additional headers first
 	if e.AdditionalHeaders != nil {
 		for k, v := range e.AdditionalHeaders {
 			headers[k] = v
 		}
 	}
-	
+
 	// Add envelope data
 	if e.From != nil {
 		headers["From"] = *e.From
@@ -66,12 +66,12 @@ func (e *EnvelopeData) ToHeaders() map[string]string {
 	if e.Hostname != nil {
 		headers["Hostname"] = *e.Hostname
 	}
-	
+
 	// Handle multiple recipients
 	for _, rcpt := range e.Rcpt {
 		headers["Rcpt"] = rcpt // Note: This will overwrite if multiple, might need array handling
 	}
-	
+
 	return headers
 }
 
@@ -198,4 +198,4 @@ func (e *EnvelopeData) WithHeader(key, value string) *EnvelopeData {
 	}
 	e.AdditionalHeaders[key] = value
 	return e
-} 
+}

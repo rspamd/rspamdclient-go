@@ -60,4 +60,4 @@ This is a test email for Rspamd scanning.
 	if len(response.Emails) > 0 {
 		fmt.Printf("  Emails: %v\n", response.Emails)
 	}
-} 
+}

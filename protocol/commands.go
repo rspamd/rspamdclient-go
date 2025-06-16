@@ -45,4 +45,4 @@ func FromCommand(command RspamdCommand) RspamdEndpoint {
 			NeedBody: true,
 		}
 	}
-} 
+}
