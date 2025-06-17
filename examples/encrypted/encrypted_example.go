@@ -6,8 +6,8 @@ import (
 	"fmt"
 	"os"
 
-	rspamd "github.com/rspamd/rspamd-client-go"
-	"github.com/rspamd/rspamd-client-go/protocol"
+	rspamd "github.com/rspamd/rspamdclient-go"
+	"github.com/rspamd/rspamdclient-go/protocol"
 )
 
 func main() {

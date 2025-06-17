@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"log"
 
-	rspamd "github.com/rspamd/rspamd-client-go"
+	rspamd "github.com/rspamd/rspamdclient-go"
 )
 
 func main() {
@@ -60,4 +60,4 @@ This is a test email for Rspamd scanning.
 	if len(response.Emails) > 0 {
 		fmt.Printf("  Emails: %v\n", response.Emails)
 	}
-} 
+}

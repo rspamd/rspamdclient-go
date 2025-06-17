@@ -51,4 +51,4 @@ type Milter struct {
 type MailHeader struct {
 	Value string `json:"value,omitempty"`
 	Order int    `json:"order,omitempty"`
-} 
+}

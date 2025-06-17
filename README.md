@@ -33,7 +33,7 @@ The implementation maintains **bug-to-bug compatibility** with Rspamd's C implem
 ### Installation
 
 ```bash
-go get github.com/vstakhov/rspamdclient-go
+go get github.com/rspamd/rspamdclient-go
 ```
 
 ### Basic Usage
@@ -46,7 +46,7 @@ import (
     "fmt"
     "log"
 
-    rspamd "github.com/vstakhov/rspamdclient-go"
+    rspamd "github.com/rspamd/rspamdclient-go"
 )
 
 func main() {

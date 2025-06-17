@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/rspamd/rspamd-client-go/protocol"
+	"github.com/rspamd/rspamdclient-go/protocol"
 	"golang.org/x/crypto/curve25519"
 )
 
@@ -44,7 +44,7 @@ func main() {
 	if *generateKey {
 		fmt.Println("HTTPCrypt Keypair Generation")
 		fmt.Println("============================")
-		
+
 		// Generate a random private key
 		var privateKey [32]byte
 		if _, err := rand.Read(privateKey[:]); err != nil {
@@ -71,7 +71,7 @@ func main() {
 		fmt.Println()
 		fmt.Println("🔑 Use the Public Key (Base32) as the --key parameter for encryption")
 		fmt.Println("⚠️  Keep the Private Key secure and configure it on your Rspamd server")
-		
+
 		return
 	}
 
@@ -98,7 +98,7 @@ func main() {
 	}
 
 	fmt.Printf("✓ Key validation passed (%d bytes)\n", len(publicKeyBytes))
-	
+
 	if *verbose {
 		fmt.Printf("  Raw key bytes: %x\n", publicKeyBytes)
 	}
@@ -117,7 +117,7 @@ func main() {
 	fmt.Printf("URL: %s\n", testURL)
 	fmt.Printf("Body size: %d bytes\n", len(testBody))
 	fmt.Printf("Headers: %d\n", len(testHeaders))
-	
+
 	if *verbose {
 		fmt.Printf("\nHeaders:\n")
 		for k, v := range testHeaders {
@@ -129,7 +129,7 @@ func main() {
 	// Perform HTTPCrypt encryption
 	fmt.Printf("\n🔐 HTTPCrypt Encryption Process:\n")
 	fmt.Printf("=================================\n")
-	
+
 	if *verbose {
 		fmt.Printf("1. Generating ephemeral keypair...\n")
 	}
@@ -144,7 +144,7 @@ func main() {
 	fmt.Printf("  Ephemeral public key: %s\n", encrypted.PeerKey)
 	fmt.Printf("  Encrypted data size: %d bytes\n", len(encrypted.Body))
 	fmt.Printf("  Original data size: %d bytes\n", len(testBody)+len(testURL)+50) // Approximate
-	
+
 	if *verbose {
 		fmt.Printf("  Shared secret: %x\n", encrypted.SharedKey)
 		fmt.Printf("  Encrypted payload (first 64 bytes): %x\n", encrypted.Body[:min(64, len(encrypted.Body))])
@@ -229,7 +229,7 @@ func contains(haystack, needle []byte) bool {
 	if len(needle) > len(haystack) {
 		return false
 	}
-	
+
 	for i := 0; i <= len(haystack)-len(needle); i++ {
 		found := true
 		for j := 0; j < len(needle); j++ {
@@ -251,4 +251,4 @@ func min(a, b int) int {
 		return a
 	}
 	return b
-} 
+}
